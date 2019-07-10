@@ -5,22 +5,37 @@ import com.google.gson.annotations.SerializedName;
 
 public class AuthPost {
 
-    @SerializedName("ticket")
+    @SerializedName("username")
     @Expose
-    private String ticket;
+    private String username;
 
-    public String getTicket() {
-        return ticket;
+    public String getUserName() {
+        return username;
     }
 
-    public void setTicket(String ticket) {
-        this.ticket = ticket;
+    public void setUsername(String ticket) {
+        this.username = username;
+    }
+
+    @SerializedName("password")
+    @Expose
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
     //Para agregar Alt + Insert
+
+
     @Override
     public String toString() {
         return "AuthPost{" +
-                "ticket='" + ticket + '\'' +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
